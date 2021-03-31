@@ -26,7 +26,6 @@ type (
 const smtpServer string = "smtp.gmail.com"
 
 var conn *tls.Conn
-var scanner *bufio.Scanner
 
 func b64(inp string) string {
 	return base64.StdEncoding.EncodeToString([]byte(inp))
@@ -43,6 +42,7 @@ func send(text string) {
 }
 
 func serverRecieve() {
+	scanner := bufio.NewScanner(conn)
 	for scanner.Scan() {
 		log.Println("S: ", scanner.Text())
 	}
@@ -101,7 +101,6 @@ func main() {
 	}
 	defer conn.Close()
 
-	scanner = bufio.NewScanner(conn)
 	go serverRecieve()
 
 	send("EHLO " + smtpServer)
