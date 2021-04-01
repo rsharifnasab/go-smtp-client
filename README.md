@@ -43,5 +43,15 @@ you can read about details of implementation in `report.md`
 
 
 
+## useful links 
+
++ about SMTP authentication [+](https://www.ndchost.com/wiki/mail/test-smtp-auth-telnet)
++ SMTP send mail explained [+](https://www.ndchost.com/wiki/mail/test-smtp-auth-telnet)
++ gmail less secure apps [+](https://support.google.com/accounts/answer/6010255?p=less-secure-apps&hl=en&visit_id=637528055941711149-3770501630&rd=1)
+
+
+
+
+
 
 
